@@ -17,7 +17,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker image
-        run: docker build -t rpa-bot .
+        run: docker build --no-cache -t rpa-bot .
 
       - name: Run automation
         run: docker run rpa-bot
