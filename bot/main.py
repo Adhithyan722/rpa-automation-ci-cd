@@ -2,6 +2,10 @@ from tasks.downloader import download_file
 from tasks.process_data import process_data
 from tasks.report_gen import generate_report
 from utils.logger import get_logger
+import os
+
+def run():
+    os.makedirs("reports", exist_ok=True)  # 🔥 safety
 
 logger = get_logger()
 
